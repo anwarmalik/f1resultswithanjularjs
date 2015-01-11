@@ -1,0 +1,26 @@
+<h2 class="sub-header">Driver Standings</h2>
+<div class="table-responsive" ng-show="drivers">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Constructor</th>
+                <th>Points</th>
+                <th>Wins</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="driver in drivers">
+                <td>{{driver.position}}</td>
+                <td>{{driver.Driver.givenName}} {{driver.Driver.familyName}}</td>
+                <td>{{driver.Constructors[0].name}}</td>
+                <td>{{driver.points}}</td>
+                <td>{{driver.wins}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="row" ng-hide="drivers">
+    <div class="alert alert-danger padding20">Data is not available for the season.</div>
+</div>

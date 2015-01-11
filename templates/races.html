@@ -1,0 +1,25 @@
+<h2 class="sub-header">Races</h2>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Race Name</th>
+                <th>Date</th>
+                <th>Circuit</th>
+                <th>Locality</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="race in races">
+                <td>{{race.round}}</td>
+                <td>{{race.raceName}}</td>
+                <td>{{race.date}}</td>
+                <td>{{race.Circuit.circuitName}}</td>
+                <td>{{race.Circuit.Location.locality}}</td>
+                <td>{{race.Circuit.Location.country}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
